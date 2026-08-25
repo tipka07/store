@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.25/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.25/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/list.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xxl-5">
+                <div class="goods-box" id="goods">
+                    <div class="menu">
+                        <input type="text" placeholder="Поиск" class="search">
+                        <button class="add btn-success" data-bs-toggle="modal" data-bs-target="#myModal">&#10010;
+                        </button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="goods table mt-3" id="table1">
+                            <thead>
+                                <tr class="table-primary align-middle">
+                                    <th data-type="number">№</th>
+                                    <th data-type="string">Название</th>
+                                    <th data-type="number">Цена, &#8381;</th>
+                                    <th data-type="number">Количество</th>
+                                    <th data-type="number"></th>
+                                    <th data-type="number"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="list">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-12 col-xxl-7">
+                <div class="price-box">
+                    <div class="menu">
+                        <div class="price-table">Итого: <span class="price-result">0 &#8381;</span></div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="price table mt-3" id="table2">
+                            <thead>
+                                <tr class="table-primary align-middle">
+                                    <th data-type="number">№</th>
+                                    <th data-type="string">Название</th>
+                                    <th data-type="number">Цена/шт, &#8381;</th>
+                                    <th data-type="number">Количество</th>
+                                    <th>Скидка, %</th>
+                                    <th data-type="number">Цена, &#8381;</th>
+                                    <th data-type="number"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="cart">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal" id="myModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Добавить товар</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <label for="good-name" class="form-label">Название товара</label>
+        <input type="text" class="form-control mb-3" id="good-name" maxlength="40">
+        <label for="good-price" class="form-label">Цена</label>
+        <input type="text" class="form-control mb-3" id="good-price">
+        <label for="good-count" class="form-label">Количество</label>
+        <input type="text" class="form-control mb-3" id="good-count" min="1" value="1">
+        <button type="submit" class="btn btn-success">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
